@@ -1,0 +1,5 @@
+---
+prod:
+  hosts:
+    postgresql:
+      ansible_host: 84.201.135.164

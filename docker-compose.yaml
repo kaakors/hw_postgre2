@@ -1,0 +1,32 @@
+version: '3.9'
+
+networks:
+  postgrNET:
+    driver: bridge
+volumes:
+  postgre_db: {}
+services:
+  postgresql-serv:
+    image: postgres:14
+    container_name: postreSQL
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=postgress
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - /var/lib/postgres:/var/lib/postgresql/data
+    networks:
+      - postgrNET
+    ports:
+      - 5432:5432
+
+  postgresql-client:
+    image: postgres:14
+    container_name: postreSQL
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=postgress
+    networks:
+      - postgrNET
+    ports:
+      - 5432:5433
