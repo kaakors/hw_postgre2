@@ -1,5 +1,5 @@
 ### 1. С помощью Terraform развернул vm в yandex cloud
-### 2. С помощью ansible установил недостающие компоненты (docker, docker-compose) (каталог docker-install)
+### 2. С помощью ansible установил недостающие компоненты (docker, docker-compose) (каталог install-docker)
 ### 3. С помощью docker-compose поднял 2 контейнера: server и client (файл docker-compose.yaml)
 ### 4. Для возможности подключения из вне прописал listen_addresses в 0.0.0.0
 ### 5. Для возвможности подключения других пользователей добавил запись в pg_hba
